@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //3a
+        for (let i=0; i<=6; i++){
+        console.log(i);
+        }
+
+        //3b
+        var n_b=parseInt(prompt("Enter a positive interger:"));
+        for (let i=0; i<=n_c; i++){
+            console.log(i);
+        }
+
+        //3c
+        var n_c=parseInt(prompt("Enter a positive interger:"));
+        for (let i=3; i<n_c; i++){
+            console.log(i);
+        }
+
+        //3d
+        var c_d=parseInt(prompt("Enter number c:"));
+        var n_d=parseInt(prompt("Enter number n which is larger than number c above:"));
+        while(1){
+            if(c_d<n_d){
+                for (let i=c_d; i<n_d; i++){
+                    console.log(i);
+                }
+                break;
+            }
+            else{
+                alert('n must be larger than c!');
+                var c_d=parseInt(prompt("Enter number c:"));
+                var n_d=parseInt(prompt("Enter number n which is larger than number c above:"));
+            }
+        }
+
+        //3e
+        var c_e=parseInt(prompt('Enter number c:'));
+        var n_e=parseInt(prompt('Enter number n which is larger than number c above'));
+        while(1){
+            if (c_e<n_e){
+                for (let i=c_e; i<n_e; i+=3){
+                    console.log(i);
+                }
+                break;
+            }
+            else{
+                alert('n must be larger than c!');
+                var c_e=parseInt(prompt("Enter number c:"));
+                var n_e=parseInt(prompt("Enter number n which is larger than number c above:"));
+            }
+        }
+
+        //3f
+        var c_f=parseInt(prompt("Enter number c:"));
+        var n_f=parseInt(prompt("Enter number n which is larger than number c above:"));
+        var s_f=parseInt(prompt('Enter the step s:'));
+        while(1){
+            if(c_f<n_f){
+                for (let i=c_f; i<n_f; i+=s_f){
+                    console.log(i);
+                }
+                break;
+            }
+            else{
+                alert('n must be larger than c!');
+                var c_f=parseInt(prompt("Enter number c:"));
+                var n_f=parseInt(prompt("Enter number n which is larger than number c above:"));
+            }
+        }
+        
+        //4
+        var n_4=parseInt(prompt('Welcome the Factorial calculator! Please enter positive iterger n:'));
+        while(1){
+            if(n_4>0){
+                let f=1
+                for (let i =1; i<=n_4; i++){
+                    f=f*i
+                }
+                alert('The factorial of ' + n_4 +' is '+ f +'.');
+                break;
+            }
+            else if(n_4==0){
+                alert('The factorial of '+ n_4 + 'is 1.');
+                break;
+            }
+            else{
+                alert('Please enter a positive interger!')
+                var n_4=parseInt(prompt('Welcome the Factorial calculator! Please enter positive iterger n:'));
+            }
+        }
+
+
+        //5
+        var age=parseInt(prompt('This is a 14+ content. Please enter your age:'));
+        if(age>=14){
+            alert('You are old enough to view our content. Have a nice day!');
+        }
+        else{
+            alert('You are not old enough. Please go back!');
+        }
+
+        //6
+        var x_6=parseFloat(prompt('Enter a number from 0 to 9:'));
+        while(1){
+            if(0<=x_6<4.5){
+                alert('Lower half of 9.');
+                break
+            }
+
+            else if(4.5<=x_6<=9){
+                alert('Higher half of 9.');
+                break
+            }
+            else{
+                alert('Your number is not in the listed range.');
+                var x_6=parseFloat(prompt('Enter a number from 0 to 9:'));
+            }
+        }
+
+        //7
+        var n_7=parseFloat(prompt('Please enter n so we can set up the scale:'));
+        var x_7=parseFloat(prompt('Please enter x so we can check to which halves of n does it belong:'));
+        if(0<=x_7<n_7/2){
+            alert(x_7+ ' is lower half of '+n_7+'.');
+        }
+        else if(n_7/2<=x_7<=n_7){
+            alert(x_7+ ' is higher half of '+n_7+'.');
+        }
+        else{
+            alert('We cannot process the pair of numbers you have entered!');
+        }
+
+        //8
+        var x_8 =parseInt(prompt("Enter number x:"));
+        if(x_8%2==0){
+            alert("This is an even number.");
+        }
+        else{
+            alert("This is an odd number.");
+        }
+
+        //9a
+        for (let i=1; i<=3; i++){
+            console.log('L');
+        }
+        for (let i=1; i<=3; i++){
+            console.log('H');
+        }
+
+        //9b
+        n_9b=parseInt(prompt('Enter n:'));
+        if (n_9b%2==1){
+            for (let i=1; i<=(n_9b+1)/2; i++){
+                console.log('L')
+            }
+            for (let i=1; i<=(n_9b-1)/2; i++){
+                console.log('H')
+            }
+        }
+        
+        //9c
+        for(let i=1; i<=4; i++){
+            console.log(0);
+            console.log(1);
+        }
+        
+        //9d
+        var n_9d=parseInt(prompt('Enter number n:'));
+        var boo=true;
+        for(let i=0; i<n_9d; i++){
+            if (boo==true){
+                console.log(0);
+            }
+            else{
+                console.log(1);
+            }
+            boo=!boo;
+        }
+
+        //10
+        weight=parseFloat(prompt('Enter your weight in kilograms:'));
+        height=parseFloat(prompt('Enter your height in centimeters:'));
+        height=height/100;
+        bmi=weight/height**2;
+        alert('Your BMI is ', bmi);
+        if(bmi<16){
+            alert('Your are severely underweight!');
+        }
+        else if(bmi<18.5){
+            alert('You are underweight!');
+        }
+        else if(bmi<25){
+            alert('You are normal. Best wishes for you.');
+        }
+        else if(bmi<30){
+            alert('You are overweight!');
+        }
+        else{
+            alert('You are obese!');
+        }
+    </script>
+</body>
+</html>
