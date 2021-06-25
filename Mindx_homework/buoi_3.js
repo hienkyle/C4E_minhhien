@@ -37,7 +37,7 @@ let number_toAdd=prompt('Please enter the sequence of numbers you wanna add up, 
 let seq_num=number_toAdd.split(",");
 let len=seq_num.length, s=0;
 for (let i=0; i<len; i++){
-    s+=seq_num[i];
+    s+=parseInt(seq_num[i]);
 }
 alert('The sum of entered numbers is '+s);
 
