@@ -1,36 +1,50 @@
 //4
 var items=['Jean', 'T - Shirt', 'Socks']
-shop: while(1){
-    let task=prompt('Welcome to the shop administration page. What would you like to perform? (Please enter C, R, U, D or Q)');
-    switch(task){
-        case c: 
-            let new_item=prompt('Please enter the name of the new item:');
-            items.push(new_item);
-            let len=item.length;
-            break;
-        case r:
-            let len=item.length;
-            for (let i=0; i<len; i++){
-                console.log(i+1 +'. '+item[i]);
-            }
-            alert('Done!')
-        case u:
-            let position=parseInt(prompt('Please enter the position you want to add your item:'));
-            let new_item=prompt('Please enter the name of the new item:');
-            item.splice(i-1,0,new_item);
-            alert('Done!')
-            break;
-        case d:
-            let position=parseInt(prompt('Please enter the position of the item you want to delete::'));
-            item.splice(position, 1);
-            alert('Succesfully');
-            break;
-        case q:
-            break shop;
-        default:
-            alert('This operation is not supported by our system! Please try again.');
-    }
+let task=prompt('Welcome to the shop administration page. What would you like to perform? (Please enter C(reate), R(ead), U(update), D(elete) or Q(uit))');
+switch(task){
+    case 'c': 
+        let new_item_c=prompt('Please enter the name of the new item:');
+        items.push(new_item_c);
+        let len_c=items.length;
+        for (let i=0; i<len_c; i++){
+            console.log(i+1 +'. '+items[i]);
+        }
+        alert('Done!')
+        break;
+    case 'r':
+        let len_r=items.length;
+        for (let i=0; i<len_r; i++){
+            console.log(i+1 +'. '+items[i]);
+        }
+        alert('Done!')
+        break;
+    case 'u':
+        let position_u=parseInt(prompt('Please enter the position you want to add your item:'));
+        let new_item_u=prompt('Please enter the name of the new item:');
+        items.splice(position_u-1,0,new_item_u);
+        let len_u=items.length;
+        for (let i=0; i<len_u; i++){
+            console.log(i+1 +'. '+items[i]);
+        }
+        alert('Done!')
+        break;
+    case 'd':
+        let position_d=parseInt(prompt('Please enter the position of the item you want to delete::'));
+        items.splice(position_d, 1);
+        alert('Succesfully');
+        let len_d=items.length;
+        for (let i=0; i<len_d; i++){
+            console.log(i+1 +'. '+items[i]);
+        }
+        break;
+    case 'q':
+        break;
+    default:
+        alert('This operation is not supported by our system! Please try again.');
 }
+
+
+
 
 //5
 let number_toAdd=prompt('Please enter the sequence of numbers you wanna add up, seperated by commas:');
@@ -47,15 +61,24 @@ let sq_min=number_toMin.split(',');
 let min_num=Math.min.apply(null, sq_min)
 alert('The smallest number is '+min_num);
 
+// min=sq_num[0];
+// len=sq_num.length;
+// for(let i=0; i<len;i++){
+//     if(min>sq_num[i]){
+//         min=sq_num[i];
+//     }
+// }
+
+
 //7
 const numb_arr=[1, -12, 34, 429, -474, 45, 77];
 let num_toIndex=parseInt(prompt('Please enter a number and we can start to search for it:'));
-i=numb_arr.indexOf(num_toIndex);
-if (a==-1){
+let i=numb_arr.indexOf(num_toIndex);
+if (i==-1){
     alert('The entered number does not include in our data.');
 }
 else{
-    alert('Great. We have FOUND the number with the index of '+a);
+    alert('Great. We have FOUND the number with the index of '+i+'.');
 }
 
 //8
@@ -90,7 +113,6 @@ for (let month=1; month<=4; month++){
 
     sheep_shave(sheep_size);
 }
-
 
 let len=sheep_size.length, sum_sheep=0;
 for (let i=0; i<len; i++){
