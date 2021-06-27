@@ -118,7 +118,7 @@ let len=sheep_size.length, sum_sheep=0;
 for (let i=0; i<len; i++){
     sum_sheep+=sheep_size[i];
 }
-console.log('My sheeps have the total size of '+s);
+console.log('My sheeps have the total size of '+sum_sheep);
 console.log('I should get '+ sum_sheep + '* $2 = ' +sum_sheep*2);
 
 //10
