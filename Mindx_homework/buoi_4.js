@@ -127,7 +127,7 @@ var task=[
 function print_course(task){
     let len=task.length;
     for(i=0; i<len; i++){
-        console.log((i+1)+', ['+(task[i].status? x:null)+'] '+task[i].name);
+        console.log((i+1)+'. ['+(task[i].status? 'x':' ')+'] '+task[i].name);
     }
 }
 let command=prompt('What would you like to do (New, Delete, Update, Complete):');
