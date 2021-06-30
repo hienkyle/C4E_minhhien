@@ -8,15 +8,16 @@ var dev_dict={
 }
 alert('Hi there, this is the dev dictionary.');
 var dev_key=prompt('Enter a keyword:');
-var explanation=dev_dict.dev_key;
-if (explanation=='undefined'){
+var explanation=dev_dict[dev_key];
+if (explanation==undefined){
     explanation=prompt('We cannot find the word: '+dev_key+', please leave your explanation:');
-    while(explanation=='undefined'){
+    while(explanation==undefined){
         explanation=prompt('Please leave your explanation:');
     }
+    dev_dict[dev_key]=explanation;
     alert('Done!');
     var dev_key=prompt('Enter a keyword:');
-    var explanation=dev_dict.dev_key;
+    var explanation=dev_dict[dev_key];
     console.log(explanation);
 }
 else{
